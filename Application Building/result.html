@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+{% block content %}
+<head>
+<div calss="container">
+    <h1 style="text-align:center"><b>Prediction:Results</b></h1>
+</div>
+<style>
+       body {
+                background-image: url({{url_for('static',filename='/images/result.jpg')}});
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: 100% 100%;
+                color: white;
+}
+ </style>
+ </head>
+
+<div class="container text-center">
+    <div class="row">
+      <div class="col">
+        <h1 style="margin-left: 6cm; margin-top: 30px;">Wave: 
+            <b>{{rew}}</b></h1>
+        <img src="{{url_for('static',filename='/images/wave/wave.png')}}" 
+            style="margin-left:5cm;height:10cm;width:10cm">
+      </div>
+      <div class="col">
+        <h1 style="margin-left: 6cm; margin-top: 30px;">Spiral: 
+            <b>{{res}}</b></h1>
+        <img src="{{url_for('static',filename='/images/spiral/spiral.png')}}" 
+            style="margin-left:5cm;height:10cm;width:10cm">
+      </div>
+    </div>
+  </div>
