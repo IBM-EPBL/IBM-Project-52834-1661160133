@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block content %}
+<head>
+<style>
+       body {
+                background-image: url({{url_for('static',filename='/images/predict.jpg')}});
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: 100% 100%;
+                color: white;
+}
+    </style>
+</head>
+    <div class="container">
+    <form method="post" enctype='multipart/form-data'>
+        <div class="mb-3">{{form.hidden_tag()}}</div>
+        <div class="mb-3">{{form.filew.label(class="form-label fs-2")}}</div>
+        <div class="mb-3">{{form.filew(class="form-control")}}</div>
+
+        <div class="mb-3">{{form.files.label(class="form-label fs-2")}}</div>
+        <div class="mb-3">{{form.files(class="form-control")}}</div>
+        <div class="mb-3">{{form.submit(class="btn btn-primary")}}</div>
+    </form>
+
+    </div>
+    <h1>{{res}}</h1>
+{% endblock %}
